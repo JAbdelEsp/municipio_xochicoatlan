@@ -62,4 +62,15 @@ export const Styles = createGlobalStyle`
             }
         }
     }
+
+    @media screen and (max-width: 460px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .header-text {
+            h1 {
+             font-size: 2.5rem !important;
+            }
+        }
+    }
 `;
