@@ -3,7 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export const Styles = createGlobalStyle`
     :root {
         --main-color-1: #BE0811;
-        --main-color-2: #D2A968:
+        --main-color-2: #D2A968;
+        --transparent: transparent;
         --gray: #9D9D9C;
         --dark: #1D1D1B;
         --sans-font:  "Montserrat", sans-serif;
@@ -62,7 +63,6 @@ export const Styles = createGlobalStyle`
             }
         }
     }
-
     @media screen and (max-width: 460px) {
         .container {
             grid-template-columns: 1fr;

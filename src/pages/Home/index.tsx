@@ -1,19 +1,51 @@
-import BurgerNav from "../../common/BurgerNav";
+import NavBar from "../../components/NavBar";
+import {
+  GlobalWrapper,
+  Overlay,
+  Row,
+  RowBg,
+  RowBgChange,
+  RowBgChangeImg,
+  RowBgGlobal,
+  RowBgImage,
+  RowBgImgGrain,
+  RowBgImgOverlay,
+  RowBgItem,
+  RowBgWrapper,
+  RowWrapper,
+  Section,
+} from "./styles";
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="item">
-        <div className="bg-overlay"></div>
-        <img src="/images/xochi_01.jpeg" alt="" />
-        <BurgerNav />
-        <div className="header-text">
-          <h1>Bienvenidos</h1>
-          <h4>H. Ayuntamiento municipal 2024 - 2027</h4>
-        </div>
-      </div>
-      <div className="item"></div>
-    </div>
+    <Section>
+      <GlobalWrapper>
+        <RowWrapper className="sticky bg">
+          <NavBar />
+          <Row>
+            <RowBgWrapper>
+              <RowBgItem>
+                <RowBgChange>
+                  <RowBgChangeImg>
+                    <RowBgGlobal>
+                      <RowBg>
+                        <RowBgImgGrain />
+                        <RowBgImgOverlay />
+                        <RowBgImage
+                          src="public/images/xochi_01.jpeg"
+                          alt="Xochicoatlán Hidalgo"
+                        />
+                      </RowBg>
+                    </RowBgGlobal>
+                  </RowBgChangeImg>
+                </RowBgChange>
+              </RowBgItem>
+            </RowBgWrapper>
+          </Row>
+        </RowWrapper>
+        <RowWrapper></RowWrapper>
+      </GlobalWrapper>
+    </Section>
   );
 };
 
