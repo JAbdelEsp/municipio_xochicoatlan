@@ -48,7 +48,7 @@ export const NavLinksWrapper = styled("div")`
   display: flex;
 `;
 
-export const NavLink = styled("div")`
+export const NavLink = styled("a")`
   padding: 1rem;
   grid-column-gap: 0.563rem;
   grid-row-gap: 0.563rem;
@@ -58,6 +58,7 @@ export const NavLink = styled("div")`
   justify-content: space-between;
   align-items: center;
   display: flex;
+  text-decoration: none;
   &:hover {
     background-color: var(--main-color-1);
     color: var(--white);

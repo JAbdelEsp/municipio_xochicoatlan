@@ -1,7 +1,6 @@
 import NavBar from "../../components/NavBar";
 import {
   GlobalWrapper,
-  Overlay,
   Row,
   RowBg,
   RowBgChange,

@@ -43,11 +43,11 @@ const NavBar = () => {
             <NavLinkTitle>Planeación</NavLinkTitle>
             <NavLinkDescription>Visitar área</NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink href="/transparencia">
             <NavLinkTitle>Transparencia</NavLinkTitle>
             <NavLinkDescription>Visitar área</NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink href="/tramites">
             <NavLinkTitle>Trámites y Servicios</NavLinkTitle>
             <NavLinkDescription>
               Portal de trámites y servicios en línea
