@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Nav = styled("div")`
   z-index: 99;
@@ -40,7 +41,7 @@ export const NavLinksWrapper = styled("div")`
   display: flex;
 `;
 
-export const NavLink = styled("a")`
+export const NavLink = styled(Link)`
   padding: 1rem;
   grid-column-gap: 0.563rem;
   grid-row-gap: 0.563rem;

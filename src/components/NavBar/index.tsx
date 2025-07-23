@@ -30,39 +30,39 @@ const NavBar = () => {
     <Nav>
       <NavMenu open={isOpen} className={isOpen ? "show" : ""}>
         <NavLinksWrapper>
-          <NavLink href="/">
+          <NavLink to="/">
             <NavLinkTitle>Inicio</NavLinkTitle>
             <NavLinkDescription>
               Bienvenidos al Portal de Xochicoatlán
             </NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink to="/gobierno">
             <NavLinkTitle>Gobierno 2024 - 2027</NavLinkTitle>
             <NavLinkDescription>Conoce a tu gobierno</NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink to="/planeacion">
             <NavLinkTitle>Planeación</NavLinkTitle>
             <NavLinkDescription>Visitar área</NavLinkDescription>
           </NavLink>
-          <NavLink href="/transparencia">
+          <NavLink to="/transparencia">
             <NavLinkTitle>Transparencia</NavLinkTitle>
             <NavLinkDescription>Visitar área</NavLinkDescription>
           </NavLink>
-          <NavLink href="/tramites">
+          <NavLink to="/tramites">
             <NavLinkTitle>Trámites y Servicios</NavLinkTitle>
             <NavLinkDescription>
               Portal de trámites y servicios en línea
             </NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink to="/tesoreria">
             <NavLinkTitle>Tesorería</NavLinkTitle>
             <NavLinkDescription>Visita área</NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink to="/noticias">
             <NavLinkTitle>Noticias</NavLinkTitle>
             <NavLinkDescription>Visita área</NavLinkDescription>
           </NavLink>
-          <NavLink>
+          <NavLink to="municipio">
             <NavLinkTitle>Tu Municipio</NavLinkTitle>
             <NavLinkDescription>Visita área</NavLinkDescription>
           </NavLink>
