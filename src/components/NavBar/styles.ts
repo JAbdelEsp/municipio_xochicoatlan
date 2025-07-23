@@ -2,45 +2,37 @@ import styled from "styled-components";
 
 export const Nav = styled("div")`
   z-index: 99;
-  width: 100%;
+  width: 50%;
   max-width: none;
   display: block;
   position: absolute;
   top: 0%;
   left: 0%;
   right: 0%;
-
-  .show {
-    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    opacity: 1;
-    display: flex;
+  img {
+    width: 220px;
+    filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.15));
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
 export const NavMenu = styled("div")<{ open: boolean }>`
   padding-top: 4.209rem;
   border-right: 1px solid #2121211a;
-  background-color: var(--white);
+  background-color: var(--transparent);
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
-  height: 100%;
-  min-height: 100svh;
-  display: none;
+  height: 0%;
   position: absolute;
   top: 0;
   left: 0%;
   right: 0%;
   overflow: auto;
-  transform: ${({ open }) =>
-    open
-      ? "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);"
-      : ""};
-  transform-style: ${({ open }) => (open ? "preserve3d" : "")};
-  opacity: ${({ open }) => (open ? "1" : "")};
-  display: ${({ open }) => (open ? "flex" : "")};
+  transition: all 650ms cubic-bezier(0.02, 0.06, 0.3, 1.56);
+  transition-delay: 100ms;
 `;
 
 export const NavLinksWrapper = styled("div")`
@@ -165,11 +157,11 @@ export const NavContainer = styled("div")`
 `;
 
 export const NavLeft = styled("div")`
+  display: flex;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   justify-content: flex-start;
   align-items: center;
-  display: flex;
 `;
 
 export const NavBurger = styled("div")`
@@ -187,28 +179,34 @@ export const NavBurger = styled("div")`
 export const NavBurgerTop = styled("div")<{ open: boolean }>`
   width: 1.777rem;
   height: 1px;
-  background-color: var(--dark);
+  background-color: ${({ open }) => (open ? "var(--dark)" : "var(--white)")};
   transform: ${({ open }) =>
     open
       ? "translate3d(0px, 7px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(135deg) skew(0deg, 0deg); transform-style: preserve-3d;"
       : ""};
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+  animation-delay: 100ms;
 `;
 
 export const NavBurgerMid = styled("div")<{ open: boolean }>`
   width: 2.369rem;
   height: 1px;
-  background-color: var(--dark);
+  background-color: ${({ open }) => (open ? "var(--dark)" : "var(--white)")};
   opacity: ${({ open }) => (open ? "0" : "1")};
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
 `;
 
 export const NavBurgerBottom = styled("div")<{ open: boolean }>`
   width: 1.777rem;
   height: 1px;
   background-color: var(--dark);
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+  background-color: ${({ open }) => (open ? "var(--dark)" : "var(--white)")};
   transform: ${({ open }) =>
     open
       ? "translate3d(0px, -7px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-135deg) skew(0deg, 0deg); transform-style: preserve-3d;"
       : ""};
+  animation-delay: 100ms;
 `;
 
 export const HeaderBreadCrum = styled("div")`
@@ -227,4 +225,12 @@ export const LogoLink = styled("div")`
   transition: letter-spacing 0.2s ease-out, color 0.2s ease-out;
   position: relative;
   overflow: hidden;
+`;
+
+export const LogoHeading = styled("div")`
+  font-family: var(--font-family--secondary-font);
+  font-size: 1.333rem;
+  letter-spacing: -0.0317em;
+  font-weight: 900;
+  line-height: 1;
 `;

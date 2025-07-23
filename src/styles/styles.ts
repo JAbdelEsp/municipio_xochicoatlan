@@ -4,6 +4,7 @@ export const Styles = createGlobalStyle`
     :root {
         --main-color-1: #BE0811;
         --main-color-2: #D2A968;
+        --main-color-blue: #003467;
         --transparent: transparent;
         --gray: #9D9D9C;
         --dark: #1D1D1B;
@@ -13,21 +14,19 @@ export const Styles = createGlobalStyle`
         --transparent: #fff0;
         --radius: 0px;
         --radius-large: 50em;
+        --text-shadow-45: rgba(0,0,0,0.45);
     }
     * {
         margin: 0;
         padding: 0;
     }
-    ::-webkit-scrollbar {
-        display: none;
+    #root {
+        overflow: clip;
     }
+    // ::-webkit-scrollbar {
+    //     display: none;
+    // }
 
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100vh;
-        width: 100%;
-    }
     .item {
         position: relative;
         img {
@@ -62,6 +61,32 @@ export const Styles = createGlobalStyle`
                 text-shadow: 3px 6px 8px rgba(0,0,0,0.65);
             }
         }
+    }
+
+    .row-text-wrapper-bottom {
+        flex-flow: wrap !important;
+        justify-content: space-between !important;
+        align-items: flex-end !important;
+    }
+    .show {
+        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        opacity: 1;
+        height: 100svh !important;
+        background-color: var(--white) !important ;
+    }
+
+    .star-line-2 {
+        display: none;
+        transform: rotate(45deg);
+    }
+    .star-line-3 {
+        transform: rotate(90deg);
+    }
+    .star-line-4 {
+        display: none;
+        transform: rotate(135deg);
     }
     @media screen and (max-width: 460px) {
         .container {

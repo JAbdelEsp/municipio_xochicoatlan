@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   HeaderBreadCrum,
+  LogoHeading,
   LogoLink,
   Nav,
   NavBurger,
@@ -27,9 +28,9 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <NavMenu open={isOpen}>
+      <NavMenu open={isOpen} className={isOpen ? "show" : ""}>
         <NavLinksWrapper>
-          <NavLink>
+          <NavLink href="/">
             <NavLinkTitle>Inicio</NavLinkTitle>
             <NavLinkDescription>
               Bienvenidos al Portal de Xochicoatlán
@@ -89,7 +90,9 @@ const NavBar = () => {
             </NavBurger>
             <HeaderBreadCrum>
               <LogoLink>
-                <img src="" alt="" />
+                <LogoHeading>
+                  <img src="/images/logo-xochi.png" alt="" />
+                </LogoHeading>
               </LogoLink>
             </HeaderBreadCrum>
           </NavLeft>
