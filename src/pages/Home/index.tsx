@@ -46,7 +46,7 @@ const Home = () => {
                         <RowBgImgGrain />
                         <RowBgImgOverlay />
                         <RowBgImage
-                          src="public/images/xochi_01.jpeg"
+                          src="images/xochi_01.jpeg"
                           alt="Xochicoatlán Hidalgo"
                         />
                       </RowBg>
