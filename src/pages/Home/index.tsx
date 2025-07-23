@@ -1,10 +1,6 @@
 import Ticker from "../../common/Ticker";
 import NavBar from "../../components/NavBar";
 import {
-  ButtonIconCircle,
-  ButtonIconWrapper,
-  ButtonLink,
-  ButtonWrapper,
   Content,
   GlobalWrapper,
   GridItem,
@@ -12,11 +8,7 @@ import {
   HeaderTitle,
   HeroButton,
   HeroButtonWrapper,
-  HeroImageGrid,
-  HeroImageGridItem,
   HeroSection,
-  HeroTextWrapper,
-  HoverImageMask,
   Row,
   RowBg,
   RowBgChange,
@@ -31,13 +23,9 @@ import {
   RowBgMainWrapper,
   RowBgWrapper,
   RowContent,
-  RowHeading,
   RowHeroHeader,
   RowHeroHeading,
   RowItem,
-  RowText,
-  RowTextMax,
-  RowTextWrapper,
   RowWrapper,
   Section,
 } from "./styles";
