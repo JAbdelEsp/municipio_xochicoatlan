@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const Section = styled("section")`
   width: 100%;
   height: 100%;
@@ -16,50 +16,25 @@ export const Section = styled("section")`
     justify-content: flex-start;
   }
   .row-content-hero {
-    min-height: 100svh !important;
-  }
-  .section-scroll {
-    min-height: auto;
+    // min-height: 100svh !important;
   }
   .row-wrapper-alt {
     grid-template-rows: minmax(33.3333%, 1fr) !important;
   }
-  .item1 {
-    background-color: blue;
-    grid-column: 1/4;
-    grid-row: 1/5;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .item2 {
-    grid-column: 1/2;
-    grid-row: 5/11;
-    .title {
-      justify-self: stretch;
+  @media screen and (max-width: 460px) {
+    .sticky {
+      position: relative;
     }
   }
-  .item3 {
-    background-color: pink;
-    grid-column: 2/4;
-    grid-row: 5/8;
-  }
-  .item4 {
-    background-color: pink;
-    grid-column: 2/4;
-    grid-row: 8/11;
-  }
-  .item5 {
-    background-color: pink;
-    grid-column: 1/2;
-    grid-row: 11/14;
-  }
-  .item6 {
-    background-color: pink;
-    grid-column: 1/2;
-    grid-row: 14/17;
-  }
-  .item7 {
-    background-color: pink;
-    grid-column: 2/4;
-    grid-row: 11/17;
+  @media screen and (max-width: 740px) {
+    .sticky {
+      position: relative;
+    }
   }
 `;
 
@@ -78,20 +53,17 @@ export const GlobalWrapper = styled("div")`
 export const RowWrapper = styled("div")`
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
-  grid-template-rows: minmax(33.3333%, 1fr) minmax(33.3333%, 1fr) minmax(
-      33.3333%,
-      1fr
-    );
-  grid-template-columns: minmax(33.3333%, 1fr) minmax(33.3333%, 1fr) minmax(
-      33.3333%,
-      1fr
-    );
-  grid-auto-rows: minmax(33.3333%, 1fr);
-  grid-auto-columns: minmax(33.3333%, 1fr);
   width: 50%;
   height: 100%;
   min-height: 100svh;
   display: grid;
+  background-color: white;
+  @media screen and (max-width: 460px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 740px) {
+    width: 100%;
+  }
 `;
 
 export const Row = styled("div")`
@@ -261,7 +233,6 @@ export const ScrollRowIcon = styled("div")``;
 
 export const RowContent = styled("div")`
   z-index: 3;
-  padding: 1rem;
   grid-column-gap: 2.369rem;
   grid-row-gap: 2.369rem;
   flex-flow: column;
@@ -362,7 +333,7 @@ export const HoverImageMask = styled("div")`
   inset: 0%;
 `;
 
-export const HeroButton = styled("a")`
+export const HeroButton = styled(Link)`
   z-index: 5;
   padding: 1.777rem 3.157rem;
   border: 0.317rem solid #f4f4f4;

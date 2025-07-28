@@ -1,26 +1,26 @@
-import { DataGrid, type GridColDef } from "@mui/x-data-grid";
+import { Table } from "antd";
 import Button from "../../common/Button";
 
-const Table = () => {
-  const columns: GridColDef<(typeof rows)[number]>[] = [
+const DataTable = () => {
+  const columns = [
     {
-      field: "tramite",
-      headerName: "Trámite o Servicio",
+      dataIndex: "tramite",
+      title: "Trámite o Servicio",
       width: 400,
       editable: false,
     },
     {
-      field: "cost",
-      headerName: "Costo $",
+      dataIndex: "cost",
+      title: "Costo $",
       width: 350,
       editable: false,
     },
     {
-      field: "online",
-      headerName: "Trámite en Línea",
+      dataIndex: "online",
+      title: "Trámite en Línea",
       width: 391,
       editable: false,
-      renderCell: (row) => (row.value ? <Button>En Línea</Button> : "No"),
+      render: (row: any) => (row ? <Button>En Línea</Button> : "No"),
     },
   ];
 
@@ -29,26 +29,18 @@ const Table = () => {
       id: 0,
       tramite: "Pago de Impuesto Predial",
       cost: "",
+      area: "tesoreria",
       online: true,
     },
-    { id: 1, tramite: "Pago de Agua Potable", cost: "", online: true },
+    {
+      id: 1,
+      tramite: "Pago de Agua Potable",
+      area: "tesoreria",
+      cost: "",
+      online: true,
+    },
   ];
-  return (
-    <DataGrid
-      className="table"
-      rows={rows}
-      columns={columns}
-      initialState={{
-        pagination: {
-          paginationModel: {
-            pageSize: 5,
-          },
-        },
-      }}
-      pageSizeOptions={[5]}
-      disableRowSelectionOnClick
-    />
-  );
+  return <Table columns={columns} dataSource={rows} />;
 };
 
-export default Table;
+export default DataTable;

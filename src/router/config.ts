@@ -11,6 +11,10 @@ const routes = [
     path: "/transparencia",
     component: "Transparencia",
   },
+  {
+    path: "/tesoreria",
+    component: "Tesoreria",
+  },
 ];
 
 export default routes;

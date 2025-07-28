@@ -1,11 +1,8 @@
+import ScrollDown from "../../common/ScrollDown";
 import Ticker from "../../common/Ticker";
-import NavBar from "../../components/NavBar";
+import InfiniteScroll from "../../components/InfiniteScroll";
 import {
-  Content,
   GlobalWrapper,
-  GridItem,
-  GridLayout,
-  HeaderTitle,
   HeroButton,
   HeroButtonWrapper,
   HeroSection,
@@ -35,7 +32,6 @@ const Home = () => {
     <Section>
       <GlobalWrapper>
         <RowWrapper className="sticky">
-          <NavBar />
           <Row>
             <RowBgWrapper>
               <RowBgItem>
@@ -45,10 +41,17 @@ const Home = () => {
                       <RowBg>
                         <RowBgImgGrain />
                         <RowBgImgOverlay />
-                        <RowBgImage
+                        {/* <RowBgImage
                           src="images/xochi_01.jpeg"
                           alt="Xochicoatlán Hidalgo"
-                        />
+                        /> */}
+                        <video
+                          src="/videos/hidalgo_magico.mp4"
+                          key={1}
+                          autoPlay={true}
+                          muted={false}
+                          loop={true}
+                        ></video>
                       </RowBg>
                     </RowBgGlobal>
                   </RowBgChangeImg>
@@ -58,8 +61,12 @@ const Home = () => {
             <RowItem>
               <RowHeroHeader>
                 <RowHeroHeading>
-                  <h1>Bienvenidos</h1>
-                  <h4>H. Ayuntamiento Municipal 2024 - 2027</h4>
+                  <h1 className="animate__animated animate__backInLeft">
+                    Bienvenidos
+                  </h1>
+                  <h4 className="animate__animated animate__backInRight">
+                    H. Ayuntamiento Municipal 2024 - 2027
+                  </h4>
                 </RowHeroHeading>
               </RowHeroHeader>
             </RowItem>
@@ -73,10 +80,15 @@ const Home = () => {
                 <HeroSection className="section-scroll">
                   <RowBgMainWrapper>
                     <HeroButtonWrapper>
-                      <HeroButton href="/tramites">
+                      <HeroButton
+                        to="/tramites"
+                        className="animate__animated animate__heartBeat"
+                      >
                         Trámites en línea
                       </HeroButton>
                     </HeroButtonWrapper>
+                    <ScrollDown />
+
                     <RowBgMainLines>
                       <RowBgMainLineV className="star-line-1" />
                       <RowBgMainLineV className="star-line-2" />
@@ -85,59 +97,7 @@ const Home = () => {
                     </RowBgMainLines>
                   </RowBgMainWrapper>
                 </HeroSection>
-                <HeroSection>
-                  <GridLayout>
-                    <GridItem className="item1"></GridItem>
-                    <GridItem className="item2">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                    <GridItem className="item3">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                    <GridItem className="item4">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                    <GridItem className="item5">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                    <GridItem className="item6">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                    <GridItem className="item7">
-                      <Content>
-                        <img src="images/xochi_01.jpeg" alt="" />
-                        <HeaderTitle>
-                          Entrega de obra en avenida principal
-                        </HeaderTitle>
-                      </Content>
-                    </GridItem>
-                  </GridLayout>
-                </HeroSection>
+                <InfiniteScroll />
               </RowContent>
             </RowItem>
           </Row>

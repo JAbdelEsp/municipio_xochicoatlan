@@ -9,7 +9,7 @@ export const MainFooter = styled("footer")`
   background-color: var(--main-color-blue);
   padding: 20px 0;
   position: relative;
-  z-index: 1000;
+  z-index: 9;
 `;
 
 export const Container = styled("div")`

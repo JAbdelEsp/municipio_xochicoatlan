@@ -8,6 +8,7 @@ export const Styles = createGlobalStyle`
         --transparent: transparent;
         --gray: #9D9D9C;
         --dark: #1D1D1B;
+        --dark-opacity-3: #00000008;
         --sans-font:  "Montserrat", sans-serif;
         --white: #fff;
         --serif-font: "Merriweather", serif;
@@ -26,43 +27,6 @@ export const Styles = createGlobalStyle`
     // ::-webkit-scrollbar {
     //     display: none;
     // }
-
-    .item {
-        position: relative;
-        img {
-            width: 100%;
-            object-fit: cover;
-            height: 100vh;
-        }
-        .bg-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.46);
-            position: 
-        }
-        .header-text {
-            position: absolute;
-            bottom: 0;
-            margin: 1.2rem;
-            h1 {
-                color: var(--white);
-                text-transform: uppercase;
-                font-size: 4rem;
-                font-family: var(--serif-font);
-                text-shadow: 3px 6px 8px rgba(0,0,0,0.65);
-                letter-spacing: 0.3rem; 
-            }
-            h4 {
-                color: var(--white);
-                text-transform: uppercase;
-                font-size: .9rem;
-                letter-spacing: 0.005rem;
-                text-shadow: 3px 6px 8px rgba(0,0,0,0.65);
-            }
-        }
-    }
-
     .row-text-wrapper-bottom {
         flex-flow: wrap !important;
         justify-content: space-between !important;
